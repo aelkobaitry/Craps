@@ -33,12 +33,12 @@ public class Die
     }
     
     /**
-     * This class rolls a die
+     * This method sums up two rolls and returns them
      *
-     * @param  y  a sample parameter for a method
+     * @param 
      * @return    the sum of x and y
      */
-    public int getRoll()
+    public int getRolls()
     {
         // put your code here
         int r1 = roll();
