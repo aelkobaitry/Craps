@@ -23,11 +23,14 @@ public class Craps
         System.out.println("Welcome to the game Craps!");
         giveInstructions(in);
         String play = "y";
-        while(play.substring(0,1).equalsIgnoreCase("y")){
+        while(play.equals("") || play.substring(0,1).equalsIgnoreCase("y")){
             System.out.println("Press [Enter] for your first roll!");
             in.nextLine();
             int roll = die.getRolls();
             System.out.println(roll);
+            System.out.println("Would you like to play again (Y/n)?");
+            play = in.nextLine();
         }
+        System.out.println("Thanks for playing!");
     }
 }
