@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Craps
 {
     public static void giveInstructions(Scanner in){
-        System.out.println("Would you like instructions on how to play the game (Y/n)?");
+        System.out.print("Would you like instructions on how to play the game (Y/n)? ");
         String instruct = in.nextLine();
         if(instruct.equals("") || instruct.substring(0,1).equalsIgnoreCase("y")){
             System.out.println("To start, you roll two six-sided dice and add the two numbers rolled together.");
@@ -36,7 +36,6 @@ public class Craps
     }
     
     public static void printVisual(int d1){
-        //Die one
         System.out.println("+-------+");
         //line one
         if(d1 == 1){
@@ -101,7 +100,7 @@ public class Craps
                     System.out.println("You lose...");
                 }
             }
-            System.out.println("Would you like to play again (Y/n)?");
+            System.out.print("Would you like to play again (Y/n)? ");
             play = in.nextLine();
         }
         System.out.println("Thanks for playing!");
