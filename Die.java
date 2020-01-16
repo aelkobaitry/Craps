@@ -16,7 +16,7 @@ public class Die
     public Die()
     {
         // initialise instance variables
-        result = roll();
+        result = rollDie();
     }
 
     /**
@@ -25,7 +25,7 @@ public class Die
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int roll()
+    public int rollDie()
     {
         // put your code here
         int roll = (int)((Math.random() * 6) + 1);
@@ -41,8 +41,8 @@ public class Die
     public int getRolls()
     {
         // put your code here
-        int r1 = roll();
-        int r2 = roll();
+        int r1 = rollDie();
+        int r2 = rollDie();
         return r1 + r2;
     }
 }
