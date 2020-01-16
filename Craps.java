@@ -18,8 +18,8 @@ public class Craps
     }
     
     public static int rollTheDice(Scanner in, Die d){
-        System.out.println("Press [Enter] to roll the dice!");
-        in.next();
+        System.out.print("Press [Enter] to roll the dice!");
+        in.nextLine();
         int r1 = d.rollDie();
         int r2 = d.rollDie();
         int total = r1 + r2;
@@ -47,8 +47,8 @@ public class Craps
                 System.out.println("Your point is: " + point);
                 result = rollTheDice(in,die);
                 while(result != point && result != 7){
-                    result = rollTheDice(in,die);
                     System.out.println("Roll again!");
+                    result = rollTheDice(in,die);
                 }
                 if(result == point){
                     System.out.println("You win!");
