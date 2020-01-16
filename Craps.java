@@ -28,9 +28,47 @@ public class Craps
         in.nextLine();
         int r1 = d.rollDie();
         int r2 = d.rollDie();
+        printVisual(r1);
+        printVisual(r2);
         int total = r1 + r2;
         System.out.println("You rolled a " + r1 + " and a " + r2 + " for a total of " + total);
         return total;
+    }
+    
+    public static void printVisual(int d1){
+        //Die one
+        System.out.println("+-------+");
+        //line one
+        if(d1 == 1){
+            System.out.println("|       |");
+        }
+        else if(d1 == 2 || d1 == 3){
+            System.out.println("| 0     |");
+        }
+        else{
+            System.out.println("| 0   0 |");
+        }
+        //line two
+        if(d1 == 1 || d1 == 3 || d1 == 5){
+            System.out.println("|   0   |");
+        }
+        else if(d1 == 2 || d1 == 4){
+            System.out.println("|       |");
+        }
+        else{
+            System.out.println("| 0   0 |");
+        }
+        //line three
+        if(d1 == 1){
+            System.out.println("|       |");
+        }
+        else if(d1 == 2 || d1 == 3){
+            System.out.println("|     0 |");
+        }
+        else{
+            System.out.println("| 0   0 |");
+        }
+        System.out.println("+-------+");
     }
     
     public static void main(String[] args){
