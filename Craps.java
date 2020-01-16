@@ -13,7 +13,13 @@ public class Craps
         System.out.println("Would you like instructions on how to play the game (Y/n)?");
         String instruct = in.nextLine();
         if(instruct.equals("") || instruct.substring(0,1).equalsIgnoreCase("y")){
-            System.out.println("Instructions");
+            System.out.println("To start, you roll two six-sided dice and add the two numbers rolled together.");
+            System.out.println("On this first result, a 7 or an 11 automatically wins, and a 2, 3, or 12 automatically loses.");
+            System.out.println("If any other number is rolled, that number becomes your \"point\".");
+            System.out.println("You then continue to roll the two dice until you roll either a 7 or your point.");
+            System.out.println("If you roll a 7, you lose, and if you roll your point, you win.");
+            System.out.println("Continue to roll the dice until you roll a 7 or your point.");
+            System.out.println("Good Luck!");
         }
     }
     
